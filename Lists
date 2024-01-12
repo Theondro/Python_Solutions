@@ -1,0 +1,16 @@
+"""Your challenge is to transform the string "Don’t panic!" into the string 
+"on tap" using only the list methods shown thus far in this book. (There’s no 
+hidden meaning in the choice of these two strings: it’s merely a matter of the 
+letters in “on tap” appearing in "Don’t panic!")."""
+
+phrase= "Don't panic!"
+plist= list(phrase)
+print(plist)
+for i in range(4):
+    plist.pop()
+plist.pop(0)
+plist.remove("'")
+plist.insert(3, plist.pop(2))
+plist.insert(4, plist.pop(5))
+new_phrase= ''.join(plist)
+print(new_phrase)
